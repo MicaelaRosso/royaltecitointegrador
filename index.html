@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./mediaqueries.css">
+</head>
+<body>
+
+<!-- SECTION HEADER CON NAVBAR-->
+   <header> <!-- Contenedor principal con la imagen -->
+    <img src="./assets/img/Royaltecito.png" alt="Royaltecito CK" class="logo_royaltecito"> <!--Le agrego clase al logo para poder trabajar despues-->
+    <nav class="navbar"> <!--Etiqueta nav / Segundo contenedor -->
+        <!-- Menù Hamburguesa-->
+        <label for="menu-toggle" class="menu-label">
+            <img src="./assets/img/menu.png" alt="" class="menu-icon" />
+          </label>
+          <input type="checkbox" id="menu-toggle" />
+          <!---->
+        <ul class="navbar_list"><!--Lista de accesos en nav-->
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li> <!-- al href le pongo # porque no nos va a llevar a ningun lado-->
+            <li><a href="#tecitos">Tecitos</a></li><!--Envolvemos el texto en la etiqueta A-->
+            <li><a href="#contact_us">Contacto</a></li>
+            <li><a href="#">Registro</a></li>
+            <li><a href="#">Iniciar sesión</a></li>
+        </ul>
+       
+    </nav>
+   </header> 
+
+   <main> <!--Etiq semántica, envuelve contenido principal-->
+
+    
+        <section id="hero" class="img-back full-height"><!--Identificamos a la seccion con ID no con class-->
+                <div class="hero-info"> <!-- Primer contenedor-->
+                    
+                    <h1> - Royal tecito - </h1>
+                    <p> Somos un grupo de amigos apasionados de viajar por el mundo y tomar tè, por eso creamos estos blends inspirados
+                        en aromas y recuerdos de diferentes paises en los que estuvimos ! </p>
+                        <h1> 🌏+🍃+❤️=☕️ </h1>
+                    
+                    <a href="#"> Quiero mi tecito </a> <!--Agrego enunciado de boton-->
+                </div>
+            
+                <div class="hero-card">
+                    <img src="./assets/img/navigation.png" alt="Mundologo">
+            
+                    <div class="hero-card-info"> <!-- Es el contenedor con la info directa de abajo de la tarjeta-->
+                        <h3>Paises visitados</h3>
+                        <span>18</span>
+                        <h3>Tecitos vendidos</h3>
+                        <span>465</span>
+
+                    </div>
+                </div>
+        </section> 
+   
+
+        <!--SECTION NOSOTROS -->
+    <section id="nosotros" class="full-height">
+       <p>
+            Diseñamos mezclas de blends para que prepares los tès màs ricos en tu casa. 
+            Especias, flores, hierbas, maderas y frutos, que otorgan sabor, aroma y color con ingredientes naturales.
+            Recreamos experiencias en infusiones, para que disfrutes de un tè con <span> màs recuerdos que azùcar </span> 
+        </p>
+        <div class="imgsectionnostros "></div>
+        <img src="./assets/img/imagennosotros.jpg" alt="Imagen section nosotros">
+
+    </section>
+        
+ <!--SECTION TECITOS -->
+
+    <section id="tecitos" class="full-height">
+        
+        <div class="tecitos-info">
+            <h2> Descubrì nuestros tecitos màs vendidos</h2>
+            
+            <p> <em>Pero antes... ¿decidiste a què paìs vas a viajar hoy? ✈️ </p> </em>
+                <span>Dale ! Apurate que tu pròximo destino està a un click de distancia,
+                y lo mejor de todo es que solo necesitas agua caliente y un Royal Tea ! </span> 
+                </div>
+            
+        <div class="cards-container">
+           
+            <div class="info-card">
+                <img src="./assets/img/tecarrot.jpg" alt="Icono Carrot cake">
+                <h3>Carrot Cake Disney</h3>
+                <h2>🥕🥕</h2>
+                    <p>Hebras de té rojo, baby carrots y canela en rama, con el dulce sabor clásico del pastry americano.</p>
+            <div class="comprar_tecito">
+                <p>$350 x 12u.</p>
+                <button> Comprar mi tecito </button>
+            </div>
+                </div>
+
+            <div class="info-card">
+                <img src="./assets/img/tejardines.jpg" alt="Icono Jardines de Cuzco">
+                <h3>Jardines de Cuzco</h3>
+                <h2>🌄🌄</h2>
+                    <p>Té verde color Machu Pichu, flores de manzanilla y flores de caléndula, muy floral, herval y liviano. </p>
+                    <div class="comprar_tecito">
+                        <p>$400 x 12u.</p>
+                        <button> Comprar mi tecito </button>
+                    </div>
+            </div>
+            
+            <div class="info-card">
+                <img src="./assets/img/teleña.jpg" alt="Icono Leña Alemana">
+                <h3>Leña de árbol Alemán</h3>
+                <h2>🍂🍂</h2>
+                <p>Aromas amaderados entre árboles nevados. Té negro, malta caramelo, humo natural.</p>
+                <div class="comprar_tecito">
+                    <p>$250 x 12u.</p>
+                    <button> Comprar mi tecito </button>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+
+
+    <!-- Creo que la section para el CONTACT US-->
+    <section id="contact_us" class="full-height">
+              <div class="datos_contacto"> <!--Creo contenedor de datos de contacto-->
+           <h2> Ubicación Take Away Royal Tecito</h2>
+            <ul class="datos_list">
+                <h3>Kevin Caldara</h3>
+                <li> <img src="./assets/img/location.png" alt="Logolocación"> 
+                    Calle Falsa 1234 </li>
+                <li> <img src="./assets/img/email.png" alt="Logoemail"> 
+                    emailfalso@gmail.com</li>
+                <li> <img src="./assets/img/call.png" alt="">
+                    011 1133 4455</li>
+              </ul>
+        </div>
+
+        <div class="mapa_contacto">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.672635327847!2d-58.55212892513277!3d-34.561843155286326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb75ebd6e4277%3A0x86cd75ca559e237f!2sPlaza%20Alem!5e0!3m2!1ses-419!2sar!4v1683674951571!5m2!1ses-419!2sar" width="400" height="270" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </section>
+        
+    </main>
+
+    <footer>
+        <div>
+          <ul class="footer-links">
+            <li><a href="#">Términos de Uso</a></li>
+            <li><a href="#">Trabajá con Nosotros</a></li>
+            <li><a href="#">Soporte</a></li>
+          </ul>
+        </div>
+       <p>Es mi primera página web </p> 🌸 
+    </footer>
+</body>
+</html>

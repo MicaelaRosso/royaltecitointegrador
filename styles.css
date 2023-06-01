@@ -1,0 +1,532 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+    /* bg colors */
+    --background: #000105;
+    --primary: #000000;
+    --secondary: #81dc57;
+    --btn-bg: #e17e15;
+    --nav: #ffffff;
+
+    /* Text colors */
+    --text-clar: #a8eebd;
+    --text-white: #f3f4f6;
+    
+
+ }
+/*Reinicio el CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    /*border: 1px solid red;*/
+    }
+
+    html {
+        scroll-behavior: smooth;
+      }
+
+/*Llamo a la etiqueta header y le aplico las caract generales*/
+header{
+    background: var(--nav);
+    width: 100%;/*Indico quue el header se estire al 100%*/
+    display: flex;/*Display, justify y align van siempre juntas las 3*/
+    justify-content: space-between; /*Separa elementos hijos (imagen y lista)*/
+    align-items: center; /*alinea elementos al centro*/
+    height: 80px;/*Altura del HEADER*/
+    padding: 0 20px; /*Separación de los hijos del header, de los costados solo*/
+    /*Acá le digo que se quede fijo el NAVBAR y luego arriba al scrolear*/
+    position: fixed;
+    top: 0;
+    z-index: 2;/*Indica la posición respecto a otro elemento*/
+    box-shadow: 0 20px 20px rgba(53, 152, 65, 0.4);
+}
+/*Llamo a la clase LOGO*/
+.logo_royaltecito{
+    height: 60%;/*Le agrego una altura específica a la imagen. Le indico que del header ocupe ese porcentaje, independientemente de si se agranda o achica el header de acuerdo a la pantalla */
+}
+/*Le aplico los mismos estilos a NAVBAR Y NAVBAR_LIST*/
+.navbar,
+.navbar_list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/*Agrego espaciado entre elementos cuyo padre es flex */
+/*Este a mi no me aplica porque no tengo un carrito de compras en la derecha, sino me separaria del carrito
+.navbar{
+    gap: 150px;
+}
+*/
+.navbar_list{
+    gap: 50px;
+}
+/*Le voy a indicar que a mi contenedor NABVAR LIST y dentro de el a la etiq A le aplique los siguientes estilos*/
+.navbar_list a{
+   /* color: var(--secondary);*/
+    font-size: 20px;
+    font-weight: 600;
+    background:  linear-gradient(90deg, #353533 0%, #1ec34f 100%);
+    -webkit-background-clip: text;
+  color: transparent;  
+}
+/*Uso un selector para indicarle que del padre NAVBAR LIST
+ me agarre al primer LI que tenga y su hijo directo de etiqueta A me agregue estos estilos
+ Evito agregar otra clase*/
+.navbar_list li:first-child > a{
+    color: var(--primary);
+    font-weight:  800;/*Le agrego peso a la fuente*/
+}
+
+main{ /*Contenedor padre*/ 
+    background: var(--nav); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+   }
+
+/*Section HERO*/
+#hero {
+   /* margin-top: 80px; Le digo que quiero que comienze luego de que termina el header, misma altura que el hero*/
+    padding: 40px;
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-back{
+    background-image: url(./assets/img/pexels-cottonbro-studio-6034377.png);
+    background-size: center center;
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.full-height{
+    min-height: 100vh;
+} 
+
+.hero-info { /*Primer contenedor*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+     
+        
+}
+
+.hero-info h1 { /*Le agrego estilo al h1: TITULO*/
+     font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 70px;
+        font-weight: 600;
+        color: var(--nav);
+      
+        
+}
+.hero-info p {/*Le doy estilo al texto*/
+    font-size: 30px;
+    width: 80%;
+    color: var(--text-white);
+ 
+}
+
+.hero-info p>span { /*Le aplico estilo a mi span que es hijo directo del p qe está dentro del contenedor hero info*/
+    font-weight: 700;
+
+}
+
+.hero-info a {
+    color: var(--text-white);
+    background-color: var(--primary);
+    width: 150px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.hero-card {
+    
+    background: var(--text-clar);
+    opacity: 0.8;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero-card-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--background);
+}
+
+.hero-card-info span {
+    background-color: var(--secondary);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/*FIN SECTION HERO */
+
+/*SECTION NOSOTROS */
+
+#nosotros {
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    width: 80%;
+    font-size: 25px;
+    text-align: center;
+    gap: 30px;
+    
+}
+
+#nosotros p {
+   color: var(--btn-bg);
+ 
+}
+
+#nosotros p>span {
+    font-weight: 650;
+   color: var(--background);
+}
+
+/*SECTION TECITOS*/
+
+#tecitos {
+        padding: 10px 0;
+        max-width: 1000px; /*fija un ANCHO MAXIMO*/
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        text-align: center;
+        /*color: var(--background);*/
+
+    }
+
+.tecitos-info h2 { /*Le doy formato al Titulo nª2*/
+    font-size: 40px;
+    background:  linear-gradient(90deg, #353533 0%, #1ec34f 100%);
+    -webkit-background-clip: text;
+  color: transparent; 
+
+}
+
+.tecitos-info {
+    color: var(--btn-bg);
+}
+.tecitos-info p {
+    font-size: 30px;
+}
+
+.tecitos-info span {
+     font-size: 28px;
+}
+
+
+
+
+
+/*Aplico estilos al contenedor de las cards*/
+
+.cards-container {
+    display: flex; /*Pongo una card al lado de la otra*/
+    justify-content: space-around; /*Les dejo espacio entre cada una*/
+    align-items: flex-start;
+    flex-wrap: wrap;/*esto hace que cuando se queda sin espacio la pantalla, mande para abajo el item */
+    gap: 40px;/*separa cada card*/
+    
+}
+
+.comprar_tecito {
+   font-size: 20px;
+   font-weight: 900;
+   display: flex;
+}
+
+.comprar_tecito button {
+    padding: 5px 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 60, 0, 0.636);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+.info-card {
+    width: 300px; /*Le  doy un alto y un ancho especìfico a todas las cards*/
+    height: 580px;
+    padding: 30px 30px; /*Espacios de cada card*/
+    display: flex;
+    flex-direction: column; /*Necesito que imagen, titulo e info de la card esten uno abajo del otro*/
+    align-items: center;/*Centro lo items y el texto al centro*/
+    text-align: center;
+    gap: 10px;/*espacio de contenidos de la card*/
+    border-radius: 50px; 
+    background-color: #cbcdd4;
+   
+ }
+
+.info-card img {
+    width:270px; /*Le ponemos ancho fijo a la imagen*/
+    border-radius: 10px;
+    img
+ 
+}
+
+.info-card h3 {
+ font-size: 30px;
+}
+
+.info-card h2 {
+    text-decoration: none;
+}/*
+
+/* SECTION CONTACT US */
+
+#contact_us {
+   
+   display:  flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+   /* background-color: var(--electric); */
+   padding: 50px 0px;
+    }
+
+.datos_contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0px 40px;
+    }
+
+.datos_contacto h2{
+    font-size: 50px;
+    color: var(--text-clar);
+  }
+
+
+.datos_list h3{
+    font-size: 25px;
+    
+}
+
+.datos_list li {
+    font-size: 20px;
+   
+}
+
+ul img {
+
+    height: 40px;
+       
+}
+
+
+footer {
+    background: var(--background);
+    color: var(--bg-electric);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 30px 0;
+}
+
+footer a {
+    color: var(--text-gray);
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;}
+
+footer p {
+    font-size: 14px;
+   /* color: var(--fire);*/
+   background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+   color: transparent;
+   background-clip: text;
+   -webkit-background-clip: text;
+}
+
+/*Menù Hamburguesa*/
+#menu-toggle,
+.menu-label {
+    display: none;
+}
+/*
+@media (max-width: 992px) {
+ 
+    main {
+        max-width: 990px;
+    }
+
+header {
+        max-width: 992px;
+    }
+
+
+  
+
+    .navbar_list{
+       position: absolute;
+        top: 90px;
+        right: 5%;
+        max-width: 992px;
+        flex-direction: column;
+        background-color: var(--secondary);
+        border: 2px solid var(--bg-azul-10);
+        border-top: 0;
+        border-radius: 0 0 15px 15px;
+        align-items: flex-start;
+        padding: 20px 20px;
+        gap: 10px;
+        z-index: 2;
+        display: none ;
+    }
+
+    .menu-label {
+        
+        display: flex;
+        order: 2;
+        cursor: pointer;
+    }
+
+    .menu-label img {
+        height: 30px;
+        width: 30px;
+    }
+
+    /*Le voy a decir que cuando el menu toggle este chequeado, desplaze la clase navbar list
+    #menu-toggle:checked+.navbar_list {
+        display: flex;
+    }
+
+
+    #hero,
+    .full-height {
+        max-width: 900px;
+        min-width: unset;
+    }
+
+    #descripcion {
+        max-width: 900px;
+    }
+
+    .cards-container {
+        max-width: 900px;
+    }
+
+    #contact_us {
+        max-width: 900px;
+    }
+}
+
+/*MOBILE*/
+/*
+@media (max-width: 576px) {
+    header{
+        max-width: 576px;/*Indico que el header se estire al 100%
+        
+}
+
+main {
+    max-width: 576px;
+}
+#hero {
+    margin-top: 100px; /*Le digo que quiero que comienze luego de que termina el header, misma altura que el hero
+    max-width: 576px;
+   flex-wrap: wrap;
+
+}
+
+
+.hero-info {
+    width: 100%;
+    align-items: center;
+}
+
+.hero-info h1 {
+width: 80%;
+min-width: unset;
+}
+
+
+#descripcion {
+    max-width: 500px;
+   
+}
+#descripcion h2 {
+    width: 100%;
+    text-align: center;
+   
+}
+
+
+#contact_us {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+   
+}
+
+.datos_contacto {
+    align-items: center;
+    gap: 30px;
+}
+
+.datos_contacto h2 {
+    align-items: center;
+    text-align: unset;
+}
+
+
+.datos_list li {
+    text-align: justify;
+   
+}
+
+iframe {
+    max-width: 90%;
+}
+
+.footer-links {
+    flex-direction: column;
+    text-align: center;
+}
+
+}
+
+*/
