@@ -1,0 +1,140 @@
+:root {
+    /* bg colors */
+    --background: #000105;
+    --primary: #000000;
+    --secondary: #81dc57;
+    --btn-bg: #e17e15;
+    --nav: #ffffff;
+
+    /* Text colors */
+    --text-clar: #a8eebd;
+    --text-white: #f3f4f6;
+    
+
+ }
+/*Reinicio el CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    /*border: 1px solid red;*/
+    }
+
+    /* Hago la secciòn del Body */
+    body {
+        /*display: flex;*/
+        align-items: center;
+        justify-content: center;
+       /* height: 100vh;*/
+        width: 100%;
+        background: url(./assets/img/teatime.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+     }
+
+    header{
+        background: var(--nav);
+        width: 100%;/*Indico quue el header se estire al 100%*/
+        display: flex;/*Display, justify y align van siempre juntas las 3*/
+        justify-content: space-between; /*Separa elementos hijos (imagen y lista)*/
+        align-items: center; /*alinea elementos al centro*/
+        height: 70px;/*Altura del HEADER*/
+        padding: 0 40px 0 20px; /*Separación de los hijos del header, de los costados solo*/
+        /*Acá le digo que se quede fijo el NAVBAR y luego arriba al scrolear*/
+        position: fixed;
+        top: 0;
+        z-index: 2;/*Indica la posición respecto a otro elemento*/
+        box-shadow: 0 20px 20px rgba(53, 152, 65, 0.4);
+    }
+    /*Llamo a la clase LOGO*/
+    .logo_royaltecito{
+        height: 60%;/*Le agrego una altura específica a la imagen. Le indico que del header ocupe ese porcentaje, independientemente de si se agranda o achica el header de acuerdo a la pantalla */
+    }
+    /*Le aplico los mismos estilos a NAVBAR Y NAVBAR_LIST*/
+    .navbar,
+    .navbar_list{
+        display: flex;
+        
+    }
+
+    .navbar_list a{
+        /* color: var(--secondary);*/
+         font-size: 30px;
+         font-weight: 600;
+         background:  linear-gradient(90deg, #353533 0%, #1ec34f 100%);
+         -webkit-background-clip: text;
+       color: transparent;  
+     }
+
+     
+
+     /*Formulario */
+
+     .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 80px 0 50px 0;
+        margin-top: 30px;
+        
+        
+     }
+      
+      .form__title {
+        font-size: 30px;
+        margin-bottom: 30px;
+        color: var(--nav);
+      }
+      
+      .form__input {
+        padding: 15px 35px 15px 15px;
+        border-radius: 10px;
+        background-color: #252525;
+        color: #fff;
+        outline: none;
+        border: 2px solid var(--secondary);
+        width: 25%;
+      }
+      /* .form__submit__btn */
+      .btn--submit {
+        margin-top: 35px;
+        font-size: 20px;
+        background: var(--background);
+        color: var(--secondary);
+        transition: all 0.3s ease;
+        padding: 15px 25px;
+        border-radius: 1rem;
+        cursor: pointer;
+      }
+      
+      /*SECTION FOOTER */
+
+
+footer {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 0 0;
+    box-shadow: -1px -15px 13px 6px rgba(53, 152, 65, 0.4);
+}
+
+footer a {
+    color: var(--primary);
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+

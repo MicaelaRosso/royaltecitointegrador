@@ -25,7 +25,7 @@
             <li><a href="#nosotros">Nosotros</a></li> <!-- al href le pongo # porque no nos va a llevar a ningun lado-->
             <li><a href="#tecitos">Tecitos</a></li><!--Envolvemos el texto en la etiqueta A-->
             <li><a href="#contact_us">Contacto</a></li>
-            <li><a href="#">Registro</a></li>
+            <li><a href="./register.html">Registro</a></li>
             <li><a href="#">Iniciar sesión</a></li>
         </ul>
        
@@ -81,7 +81,7 @@
             
             <p> <em>Pero antes... ¿decidiste a què paìs vas a viajar hoy? ✈️ </p> </em>
                 <span>Dale ! Apurate que tu pròximo destino està a un click de distancia,
-                y lo mejor de todo es que solo necesitas agua caliente y un Royal Tea ! </span> 
+                y lo mejor de todo es que solo necesitas agua caliente y un Royal Tecito ☕️! </span> 
                 </div>
             
         <div class="cards-container">
@@ -125,17 +125,45 @@
 
     <!-- Creo que la section para el CONTACT US-->
     <section id="contact_us" class="full-height">
-              <div class="datos_contacto"> <!--Creo contenedor de datos de contacto-->
-           <h2> Ubicación Take Away Royal Tecito</h2>
-            <ul class="datos_list">
-                <h3>Kevin Caldara</h3>
+        <h2> -> Envianos tu consulta <- </h2> 
+        <div class="formulario">
+           
+            <form action="">
+                <div class="form_item">
+                    <label for="name">Nombre:</label>
+                    <input type="text" name="name" id="name" placeholder="Escriba su nombre">
+                </div>
+                <div class="form_item">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Escriba su correo electrònico">
+                </div>
+                <div class="form_item">
+                    <label for="consulta">Consulta:</label>
+                    <textarea name="texto" id="texto" cols="70" rows="2">Escriba su consulta, gracias !</textarea>
+                    <!--<input type="text" name="consulta" id="consulta" placeholder="Escriba su consulta">
+                    -->
+                </div>
+                <div class="boton">
+                <button type="submit">Enviar
+                </button>
+            </div>
+            </form>
+        </div>
+        
+        
+        <div class="datos_contacto"> <!--Creo contenedor de datos de contacto-->
+           <h2> Take Away Royal Tecito</h2>
+            <div class="contacto_container">
+            <!--class="datos_list"-->
+                <ul>
                 <li> <img src="./assets/img/location.png" alt="Logolocación"> 
-                    Calle Falsa 1234 </li>
+                    Hyde Park 3540, V.Ballester </li>
                 <li> <img src="./assets/img/email.png" alt="Logoemail"> 
-                    emailfalso@gmail.com</li>
+                    royaltecito@gmail.com</li>
                 <li> <img src="./assets/img/call.png" alt="">
                     011 1133 4455</li>
               </ul>
+            </div>
         </div>
 
         <div class="mapa_contacto">
@@ -154,7 +182,7 @@
             <li><a href="#">Soporte</a></li>
           </ul>
         </div>
-       <p>Es mi primera página web </p> 🌸 
+        <p> *Es mi primer landing page*</p>
     </footer>
 </body>
 </html>
