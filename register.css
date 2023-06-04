@@ -1,16 +1,14 @@
 :root {
-    /* bg colors */
+  
     --background: #000105;
-    --primary: #000000;
+   
     --secondary: #81dc57;
     --btn-bg: #e17e15;
     --nav: #ffffff;
-
-    /* Text colors */
     --text-clar: #a8eebd;
     --text-white: #f3f4f6;
-    
-
+    --box-shadows: 0 20px 20px rgba(53, 152, 65, 0.4);
+    --boxshadowfooter: 20px -20px 50px rgba(53, 209, 71, 0.45);
  }
 /*Reinicio el CSS*/
 *{
@@ -22,7 +20,7 @@
     list-style-type: none;
     /*border: 1px solid red;*/
     }
-
+  
     /* Hago la secciòn del Body */
     body {
         /*display: flex;*/
@@ -48,7 +46,7 @@
         position: fixed;
         top: 0;
         z-index: 2;/*Indica la posición respecto a otro elemento*/
-        box-shadow: 0 20px 20px rgba(53, 152, 65, 0.4);
+        box-shadow: var(--box-shadows);
     }
     /*Llamo a la clase LOGO*/
     .logo_royaltecito{
@@ -113,28 +111,4 @@
         cursor: pointer;
       }
       
-      /*SECTION FOOTER */
-
-
-footer {
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0 0 0;
-    box-shadow: -1px -15px 13px 6px rgba(53, 152, 65, 0.4);
-}
-
-footer a {
-    color: var(--primary);
-    font-weight: 400;
-    font-size: 15px;
-}
-
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
+      
