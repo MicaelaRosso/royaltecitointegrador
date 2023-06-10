@@ -24,7 +24,7 @@
     font-family: "Poppins", sans-serif;
     text-decoration: none;
     list-style-type: none;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     }
 
     html {
@@ -151,12 +151,30 @@ main{ /*Contenedor padre*/
     color: var(--text-white);
     background-color: var(--background);
     width: 150px;
-    padding: 10px 10px;
+    padding: 5px 5px;
     border-radius: 10px;
     font-size: 18px;
     text-align: center;
     font-weight: 800;
+    cursor: pointer;
+    transition: background 0.8s;
 }
+
+/*HOVER*/
+
+    .hero-info a:hover {
+    background: var(--secondary) radial-gradient(circle, transparent 10%, #f59b47 1%) center/15000%;
+    color: white;
+    }
+    .hero-info a:active{
+    background-color:var(--background);
+    background-size: 50%;
+    transition: background 0s;
+    }
+
+
+
+/**/
 
 .hero-card {
     
@@ -276,7 +294,13 @@ main{ /*Contenedor padre*/
     cursor: pointer;
     font-size: 15px;
     font-weight: 700;
+    transition: all 0.5s ease-in-out;
 }
+
+.comprar_tecito button:hover {
+    box-shadow: 5px 5px var(--secondary), 2px 2px var(--secondary), 3px 3px var(--background);
+    transform: translateX(-5px);
+    }
 
 
 .info-card {
@@ -290,9 +314,16 @@ main{ /*Contenedor padre*/
     gap: 10px;/*espacio de contenidos de la card*/
     border-radius: 50px; 
     background-color: #cbcdd4;
-   
+    /**/
+    transition: all 400ms ease;
  }
 
+ .info-card:hover {
+        box-shadow: 5px 5px 20px rgba(255, 60, 0, 0.6);
+        transform: translateY(-3%);
+ }
+
+ /**/
 .info-card img {
     width:270px; /*Le ponemos ancho fijo a la imagen*/
     border-radius: 10px;

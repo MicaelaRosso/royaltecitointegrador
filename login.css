@@ -1,14 +1,6 @@
 
     
-.form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    height: 75vh;
-  }
-  
+ 
   .form__title {
     font-size: 16px;
     margin-bottom: 30px;
