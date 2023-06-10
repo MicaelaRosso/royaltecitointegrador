@@ -472,7 +472,7 @@ footer p {
 
 /*MEDIAQUERIES CSS PRINCIPAL */
 
-@media screen and (max-width: 992px)  {
+@media screen and (max-width: 992px) {
 
     .full-height {
         min-height: 0%;
@@ -519,6 +519,7 @@ footer p {
     gap: 30px;
 }
 
+
 .hero-card {
     align-items: center;
     flex-direction: row;
@@ -532,7 +533,6 @@ footer p {
     width: 50%;
 }
 
-
 /* ARREGLO SECTION NOSOTROS QUE SE ROMPE ENTRE 992 Y 768 */
 #nosotros {
     flex-direction: column;
@@ -545,7 +545,7 @@ width: 80%;
 }
 
 .imgsectionnosotros img {
-    width: 70%;
+    width: 85%;
 
 }
 
@@ -565,51 +565,112 @@ width: 80%;
 
 }
 
-/*MOBILE*/
 
-@media (max-width: 576px) {
+                     /*MEDIA 768 */
+
+
+@media screen and (max-width: 768px){
+
+    .menu-label img {
+        width: 80%;
+    }
 
     .hero-info h1 {
-        font-size: 50px;
+        font-size: 60px;
     }
 
     .hero-info p {
-        font-size: 20px;
-        width: 100%;
-    }
-
-    .hero-info h2 {
-        font-size: 45px;
+        font-size: 25px;
+        width: 90%;
+        color: var(--text-white);
     }
 
     .imgsectionnosotros img {
         width: 100%;
     }
 
-    .info-card {
-        width: 100%;
-        height: 100%;
-        
+    .tecitos-info p,
+    .tecitos-info span {
+        font-size: 25px;
+        margin: 25px 10px;
     }
 
-    .info-card img {
-        width: 400px;
+    #contact_us h2 {
+        font-size: 35px;
     }
 
-    .info-card p {
+    .formulario {
+        width: 70%;
+    }
+    
+    .contacto_container li {
         font-size: 20px;
     }
 
-    .comprar_tecito {
-        font-size: 20px;
-        font-weight: 900;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .comprar_tecito button {
-        font-size: 20px;
+    .datos_contacto {
+        margin: 0;
     }
 }
+
+                      /*MOBILE*/
+
+ @media (max-width: 576px) {
+
+    .hero-info h1 {
+        font-size: 40px;
+    }
+    
+    .hero-info h2 {
+        font-size: 35px;
+    }
+
+    .imgsectionnosotros {
+        width: 100%;
+    }
+
+    #contact_us h2 {
+         text-align: center;
+    }
+
+    .mapa_contacto {
+        width: 75%;
+        display: flex;
+    }
+
+    footer {
+        padding: 10px 15px;
+    }
+
+    .footer-links {
+       text-align: center;
+       gap: 10px;
+}
+
+    footer a {
+        font-size: 12px;
+    }
+
+    footer p {
+        font-size: 12px;
+        text-align: center;
+    }
+
+}
+       /* ------- MEDIAQUERI DEBAJO DE 411 */
+
+
+@media (max-width: 410px) {
+
+    main {
+    width: fit-content;
+}
+
+    #nosotros {
+        padding: 20px;
+    }
+
+ }
+       }
+
+   
     
