@@ -11,7 +11,7 @@
     --boxshadowfooter: 20px -20px 50px rgba(53, 209, 71, 0.45);
  }
  
-/*Reinicio el CSS*/
+
 *{
     margin: 0;
     padding: 0;
@@ -31,16 +31,15 @@
 
     header{
         background: var(--nav);
-        width: 100%;/*Indico quue el header se estire al 100%*/
-        display: flex;/*Display, justify y align van siempre juntas las 3*/
-        justify-content: space-between; /*Separa elementos hijos (imagen y lista)*/
-        align-items: center; /*alinea elementos al centro*/
-        height: 70px;/*Altura del HEADER*/
-        padding: 0 40px 0 20px; /*Separación de los hijos del header, de los costados solo*/
-        /*Acá le digo que se quede fijo el NAVBAR y luego arriba al scrolear*/
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        height: 70px;
+        padding: 0 40px 0 20px;
         position: fixed;
         top: 0;
-        z-index: 2;/*Indica la posición respecto a otro elemento*/
+        z-index: 2;
         box-shadow: var(--box-shadows);
     }
    
@@ -55,7 +54,6 @@
     }
 
     .navbar_list a{
-        /* color: var(--secondary);*/
          font-size: 30px;
          font-weight: 600;
          background:  linear-gradient(90deg, #353533 0%, #1ec34f 100%);

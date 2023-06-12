@@ -32,26 +32,26 @@
         scroll-padding-top: 80px;
       }
 
-/*Llamo a la etiqueta header y le aplico las caract generales*/
+
 header{
     background: var(--nav);
-    width: 100%;/*Indico quue el header se estire al 100%*/
-    display: flex;/*Display, justify y align van siempre juntas las 3*/
-    justify-content: space-between; /*Separa elementos hijos (imagen y lista)*/
-    align-items: center; /*alinea elementos al centro*/
-    height: 80px;/*Altura del HEADER*/
-    padding: 0 20px; /*Separación de los hijos del header, de los costados solo*/
-    /*Acá le digo que se quede fijo el NAVBAR y luego arriba al scrolear*/
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    height: 80px;
+    padding: 0 20px; 
+    
     position: fixed;
     top: 0;
-    z-index: 2;/*Indica la posición respecto a otro elemento*/
+    z-index: 2;
     box-shadow: var(--box-shadows);
 }
-/*Llamo a la clase LOGO*/
+
 .logo_royaltecito{
-    height: 60%;/*Le agrego una altura específica a la imagen. Le indico que del header ocupe ese porcentaje, independientemente de si se agranda o achica el header de acuerdo a la pantalla */
+    height: 60%;
 }
-/*Le aplico los mismos estilos a NAVBAR Y NAVBAR_LIST*/
+
 .navbar,
 .navbar_list{
     display: flex;
@@ -64,24 +64,23 @@ header{
 .navbar_list{
     gap: 30px;
 }
-/*Le voy a indicar que a mi contenedor NABVAR LIST y dentro de el a la etiq A le aplique los siguientes estilos*/
+
 .navbar_list a{
-   /* color: var(--secondary);*/
     font-size: 20px;
     font-weight: 600;
     background: var(--gradientback);
     -webkit-background-clip: text;
-  color: transparent;  
-}
-/*Uso un selector para indicarle que del padre NAVBAR LIST
- me agarre al primer LI que tenga y su hijo directo de etiqueta A me agregue estos estilos
- Evito agregar otra clase*/
-.navbar_list li:first-child > a{
-    color: var(--primary);
-    font-weight:  800;/*Le agrego peso a la fuente*/
+  color: transparent; 
+ 
 }
 
-main{ /*Contenedor padre*/ 
+
+.navbar_list li:first-child > a{
+    color: var(--primary);
+    font-weight:  800;
+}
+
+main{ 
     background: var(--nav); 
     display: flex;
     flex-direction: column;
@@ -92,7 +91,7 @@ main{ /*Contenedor padre*/
 
 /*Section HERO*/
 #hero {
-   /* margin-top: 80px; Le digo que quiero que comienze luego de que termina el header, misma altura que el hero*/
+   
     padding: 40px;
     margin-top: 50px;
     display: flex;
@@ -103,10 +102,13 @@ main{ /*Contenedor padre*/
 
 .img-back{
     background-image: url(./assets/img/pexels-cottonbro-studio-6034377.png);
-    background-size: center center;
-    background-position: top right;
+    /*background-size: center center;
+    /*background-position: top right;*/
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+        
 }
 
 
@@ -123,7 +125,7 @@ main{ /*Contenedor padre*/
         
 }
 
-.hero-info h1 { /*Le agrego estilo al h1: TITULO*/
+.hero-info h1 { 
      font-family:Georgia, 'Times New Roman', Times, serif;
         font-size: 70px;
         font-weight: 600;
@@ -131,14 +133,14 @@ main{ /*Contenedor padre*/
       
         
 }
-.hero-info p {/*Le doy estilo al texto*/
+.hero-info p {
     font-size: 30px;
     width: 80%;
     color: var(--text-white);
  
 }
 
-.hero-info p>span { /*Le aplico estilo a mi span que es hijo directo del p qe está dentro del contenedor hero info*/
+.hero-info p>span { 
     font-weight: 700;
 
 }
@@ -151,9 +153,9 @@ main{ /*Contenedor padre*/
     color: var(--text-white);
     background-color: var(--background);
     width: 150px;
-    padding: 5px 5px;
+    padding: 7px 7px;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     font-weight: 800;
     cursor: pointer;
@@ -237,7 +239,7 @@ main{ /*Contenedor padre*/
 /*SECTION TECITOS*/
 
 #tecitos {
-        max-width: 1000px; /*fija un ANCHO MAXIMO*/
+        max-width: 1000px; 
         flex-direction: column;
         display: flex;
         align-items: center;
@@ -248,7 +250,7 @@ main{ /*Contenedor padre*/
 
     }
 
-.tecitos-info h2 { /*Le doy formato al Titulo nª2*/
+.tecitos-info h2 { 
     font-size: 40px;
     background: var(--gradientback);
     -webkit-background-clip: text;
@@ -273,11 +275,11 @@ main{ /*Contenedor padre*/
 /*Aplico estilos al contenedor de las cards*/
 
 .cards-container {
-    display: flex; /*Pongo una card al lado de la otra*/
-    justify-content: space-around; /*Les dejo espacio entre cada una*/
+    display: flex; 
+    justify-content: space-around; 
     align-items: flex-start;
-    flex-wrap: wrap;/*esto hace que cuando se queda sin espacio la pantalla, mande para abajo el item */
-    gap: 40px;/*separa cada card*/
+    flex-wrap: wrap;
+    gap: 40px;
     
 }
 
@@ -304,14 +306,14 @@ main{ /*Contenedor padre*/
 
 
 .info-card {
-    width: 300px; /*Le  doy un alto y un ancho especìfico a todas las cards*/
+    width: 300px; 
     height: 580px;
-    padding: 30px 30px; /*Espacios de cada card*/
+    padding: 30px 30px; 
     display: flex;
-    flex-direction: column; /*Necesito que imagen, titulo e info de la card esten uno abajo del otro*/
-    align-items: center;/*Centro lo items y el texto al centro*/
+    flex-direction: column; 
+    align-items: center;
     text-align: center;
-    gap: 10px;/*espacio de contenidos de la card*/
+    gap: 10px;
     border-radius: 50px; 
     background-color: #cbcdd4;
     /**/
@@ -325,7 +327,7 @@ main{ /*Contenedor padre*/
 
  /**/
 .info-card img {
-    width:270px; /*Le ponemos ancho fijo a la imagen*/
+    width:270px; 
     border-radius: 10px;
  
 }
@@ -564,7 +566,7 @@ footer p {
     width: 50%;
 }
 
-/* ARREGLO SECTION NOSOTROS QUE SE ROMPE ENTRE 992 Y 768 */
+
 #nosotros {
     flex-direction: column;
     padding-top: 25px;
@@ -692,12 +694,21 @@ width: 80%;
 
 @media (max-width: 410px) {
 
-    main {
+   /* main {
     width: fit-content;
+}*/
+
+iframe {
+    border: 1px solid black;
+    width: 100%; /* takes precedence over the width set with the HTML width attribute */
 }
 
     #nosotros {
         padding: 20px;
+    }
+
+    .cards-container {
+        padding: 0;
     }
 
  }
