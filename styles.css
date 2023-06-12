@@ -107,7 +107,7 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
         
 }
 
@@ -694,13 +694,22 @@ width: 80%;
 
 @media (max-width: 410px) {
 
-   /* main {
-    width: fit-content;
-}*/
 
 iframe {
-    border: 1px solid black;
     width: 100%; /* takes precedence over the width set with the HTML width attribute */
+}
+
+#hero {
+    padding: 40px 15px;
+
+}
+
+.hero-info {
+     gap: 20px;
+}
+
+.hero-info h1 {
+    font-size: 35px;
 }
 
     #nosotros {
